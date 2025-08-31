@@ -11,7 +11,6 @@ fi
 
 # invoke installers
 . ./01-setupnode.deb.sh
-npm install -g pnpm
 
 # restore cwd if different from script dir
 if [ "$sdir" != "$cwdir" ]; then

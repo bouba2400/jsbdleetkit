@@ -1,4 +1,4 @@
-import { twoSum } from "../../src/num-utils.js";
+import { twoSum } from "../../lib/num-utils.js";
 
 function twoSumOfTwoEqualElementsSource() {
     const nums = [3,3];

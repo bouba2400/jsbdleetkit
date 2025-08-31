@@ -2,10 +2,7 @@
   "name": "jsbdleetkit",
   "version": "0.0.0",
   "description": "jsbdleetkit",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bouba2400/jsbdleetkit.git"
@@ -15,5 +12,6 @@
   "bugs": {
     "url": "https://github.com/bouba2400/jsbdleetkit/issues"
   },
-  "homepage": "https://github.com/bouba2400/jsbdleetkit#readme"
+  "homepage": "https://github.com/bouba2400/jsbdleetkit#readme",
+  "workspaces": ["solution/*"]
 }

@@ -1,0 +1,10 @@
+{
+  "name": "bdleetkit",
+  "version": "0.0.0",
+  "description": "bdleetkit",
+  "type": "module",
+  "module": "dist/index.js",
+  "scripts": {},
+  "author": "Boubacar Diallo",
+  "license": "ISC"
+}
