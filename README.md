@@ -2,6 +2,7 @@
 ## Overview
 ## Installation
 ## Usage
+## License
 ## Support
 ## Security
 ## Contributing

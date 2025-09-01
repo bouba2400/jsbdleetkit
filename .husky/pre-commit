@@ -1,2 +1,8 @@
 #!/usr/bin/env sh
-npm run lintstaged
+
+branch=$(git rev-parse --abbrev-ref HEAD)
+if [ "$branch" = "main" ]; then
+    npm run build
+else
+    npm run lintstaged
+fi

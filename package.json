@@ -27,7 +27,8 @@
   ],
   "devDependencies": {
     "husky": "9.1.7",
-    "lint-staged": "^16.1.5",
-    "nx": "21.4.1"
+    "lint-staged": "16.1.5",
+    "nx": "21.4.1",
+    "xo": "1.2.2"
   }
 }
