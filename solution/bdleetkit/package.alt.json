@@ -5,12 +5,16 @@
   "type": "module",
   "module": "dist/index.js",
   "scripts": {
+    "devbundle": "echo devbundle...",
+    "devstart": "echo devstart...",
     "lint": "echo lint...",
     "test": "echo test...",
-    "bundle": "echo bundle...",
+    "distbundle": "echo distbundle...",
     "check": "echo check...",
     "build": "echo build...",
-    "deploy": "echo deploy..."
+    "deploy": "echo deploy...",
+    "diststart": "echo diststart...",
+    "start": "echo start..."
   },
   "author": "Boubacar Diallo",
   "license": "ISC"

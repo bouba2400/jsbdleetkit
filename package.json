@@ -2,7 +2,16 @@
   "name": "jsbdleetkit",
   "version": "0.0.0",
   "description": "jsbdleetkit",
-  "scripts": {},
+  "scripts": {
+    "prepare": "sh ./tooling/localenvsetup/setuphusky.sh",
+    "lint": "echo lint...",
+    "lintstaged": "lint-staged",
+    "test": "echo test...",
+    "bundle": "echo bundle...",
+    "check": "echo check...",
+    "build": "echo build...",
+    "deploy": "echo deploy..."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bouba2400/jsbdleetkit.git"
@@ -13,5 +22,12 @@
     "url": "https://github.com/bouba2400/jsbdleetkit/issues"
   },
   "homepage": "https://github.com/bouba2400/jsbdleetkit#readme",
-  "workspaces": ["solution/*"]
+  "workspaces": [
+    "solution/*"
+  ],
+  "devDependencies": {
+    "husky": "9.1.7",
+    "lint-staged": "^16.1.5",
+    "nx": "21.4.1"
+  }
 }

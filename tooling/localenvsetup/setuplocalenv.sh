@@ -10,7 +10,7 @@ if [ "$sdir" != "$cwdir" ]; then
 fi
 
 # invoke installers
-. ./01-setupnode.deb.sh
+. ./00-setupnode.deb.sh
 
 # restore cwd if different from script dir
 if [ "$sdir" != "$cwdir" ]; then
