@@ -7,7 +7,8 @@
     "prepare": "sh ./tooling/localenvsetup/setuphusky.sh",
     "lintstaged": "lint-staged",
     "packageaffected": "nx affected -t package",
-    "deployaffected": "nx affected -t deploy"
+    "deployaffected": "nx affected -t deploy",
+    "verifyall": "npm run verify --workspaces --if-present"
   },
   "repository": {
     "type": "git",
