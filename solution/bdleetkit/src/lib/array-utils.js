@@ -23,5 +23,3 @@ export const twoSum = function (nums, target) {
 
 	return [xIndex, yIndex];
 };
-
-// Module.exports = { twoSum };
