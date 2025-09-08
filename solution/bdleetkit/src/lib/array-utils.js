@@ -28,17 +28,17 @@ export const twoSum = function (nums, target) {
  * @param {number[]} nums
  * @return {number}
  */
-export const missingNumber = function(nums) {
-    const n = nums.length;
+export const missingNumber = function (nums) {
+	const n = nums.length;
 
 	let targetSum = 0;
 	for (let i = 1; i <= n; i++) {
-		targetSum += i;		
+		targetSum += i;
 	}
 
 	let currentSum = 0;
-	for (let i = 0; i < nums.length; i++) {
-		currentSum += nums[i];		
+	for (const number_ of nums) {
+		currentSum += number_;
 	}
 
 	return targetSum - currentSum;
