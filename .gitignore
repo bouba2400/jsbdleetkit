@@ -16,3 +16,5 @@ build/
 
 # Coverage reports
 coverage/
+
+.nx/

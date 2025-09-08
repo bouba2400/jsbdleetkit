@@ -2,15 +2,12 @@
   "name": "jsbdleetkit",
   "version": "0.0.0",
   "description": "jsbdleetkit",
-  "scripts": {
+  "private": true,
+ "scripts": {
     "prepare": "sh ./tooling/localenvsetup/setuphusky.sh",
-    "lint": "echo lint...",
     "lintstaged": "lint-staged",
-    "test": "echo test...",
-    "bundle": "echo bundle...",
-    "check": "echo check...",
-    "build": "echo build...",
-    "deploy": "echo deploy..."
+    "packageaffected": "nx affected -t package",
+    "deployaffected": "nx affected -t deploy"
   },
   "repository": {
     "type": "git",

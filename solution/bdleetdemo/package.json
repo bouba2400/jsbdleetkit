@@ -1,23 +1,24 @@
 {
-  "name": "bdleetkit",
+  "name": "bdleetdemo",
   "version": "0.0.0",
   "private": true,
-  "description": "bdleetkit",
+  "description": "bdleetdemo",
   "author": "Boubacar Diallo",
   "license": "ISC",
   "type": "module",
+  "bin": "dist/app/main.js",
   "scripts": {
     "lint": "xo --fix",
     "test": "echo test...",
     "bundle": "node etc/build/bundle.js",
-    "bundleonchange": "echo bundleonchange...",
     "prepackage": "npm run lint && npm run test && npm run bundle",
     "package": "echo package...",
     "verify": "echo verify...",
-    "predeploy": "npm run package && npm run verify",
-    "deploy": "echo deploy..."
+    "deploy": "echo deploy...",
+    "execute": "echo execute..."
   },
-  "exports": {
-    "./*": "./dist/lib/*.js"
-  }
+  "dependencies": {
+    "bdleetkit": "0.0.0"
+  },
+  "bundleDependencies": true
 }

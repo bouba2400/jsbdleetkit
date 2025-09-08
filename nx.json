@@ -1,3 +1,19 @@
 {
-  "$schema": "./node_modules/nx/schemas/nx-schema.json"
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "package": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["^bundle"],
+      "options": {
+        "command": "npm run package"
+      }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["^bundle"],
+      "options": {
+        "command": "npm run deploy"
+      }
+    }
+  }
 }

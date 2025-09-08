@@ -3,26 +3,25 @@
  * @param {number} target
  * @return {number[]}
  */
-export const twoSum = function(nums, target) {
-    let xIndex = -1;
-    let yIndex = -1;
-    const numToIndexMap = {};
+export const twoSum = function (nums, target) {
+	let xIndex = -1;
+	let yIndex = -1;
+	const numberToIndexMap = {};
 
-    for (let i = 0; i < nums.length; i++) {
-        numToIndexMap[nums[i]] = i;
-    }
+	for (const [i, number_] of nums.entries()) {
+		numberToIndexMap[number_] = i;
+	}
 
-    for (let i = 0; i < nums.length; i++) {
-        const x = nums[i];
-        const y = target - x;
-        if (numToIndexMap[y] !== undefined && numToIndexMap[y] !== i) {
-            yIndex = numToIndexMap[y];
-            xIndex = i;
-            break;
-        }
-    }
+	for (const [i, x] of nums.entries()) {
+		const y = target - x;
+		if (numberToIndexMap[y] !== undefined && numberToIndexMap[y] !== i) {
+			yIndex = numberToIndexMap[y];
+			xIndex = i;
+			break;
+		}
+	}
 
-    return [xIndex, yIndex];
+	return [xIndex, yIndex];
 };
 
-// module.exports = { twoSum };
+// Module.exports = { twoSum };
