@@ -66,4 +66,6 @@ passed = returnsZeroAndOneForComplementingFirstTwoElementsArray() || passed;
 passed = returnsOneAndTwoForComplementingLastTwoElementsArray() || passed;
 passed = returnsOneAndThreeForComplementingNonAdjacentElementsArray() || passed;
 
-if (!passed) throw new Error("One or more tests failed!");
+if (!passed) {
+	throw new Error('One or more tests failed!');
+}
