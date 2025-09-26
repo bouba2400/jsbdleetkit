@@ -10,7 +10,7 @@
     },
     "deploy": {
       "executor": "nx:run-commands",
-      "dependsOn": ["^bundle"],
+      "dependsOn": ["^package"],
       "options": {
         "command": "npm run deploy"
       }

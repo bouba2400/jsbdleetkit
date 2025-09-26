@@ -9,11 +9,11 @@
   "scripts": {
     "lint": "xo --fix",
     "test": "node src/test/array-utils/twosum.test.js",
-    "bundle": "node etc/builders/bundle.js",
+    "bundle": "node src/build/bundle.js",
     "bundleonchange": "echo bundleonchange...",
     "prepackage": "npm run lint && npm run test && npm run bundle",
     "package": "echo package...",
-    "preverify": "npm run bundle",
+    "preverify": "npm run package",
     "verify": "echo verify...",
     "predeploy": "npm run package",
     "deploy": "echo deploy..."

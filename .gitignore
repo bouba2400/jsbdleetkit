@@ -9,7 +9,9 @@ pnpm-debug.log*
 
 # Build outputs
 dist/
-build/
+**/build/
+!**/src/build/
+!**/src/build/**
 
 # Environment variables
 .env
