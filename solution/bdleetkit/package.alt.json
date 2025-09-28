@@ -3,18 +3,48 @@
   "version": "0.0.0",
   "description": "bdleetkit",
   "type": "module",
-  "module": "dist/index.js",
   "scripts": {
-    "devbundle": "echo devbundle...",
-    "devstart": "echo devstart...",
-    "lint": "echo lint...",
+    "bundle": "echo bundle...",
+    "bundledev": "echo bundle...",
+    "bundleprod": "echo bundle...",
     "test": "echo test...",
-    "distbundle": "echo distbundle...",
-    "check": "echo check...",
-    "build": "echo build...",
+
+    "package": "echo package...",
+    "postpackage": "npm run verifykeycqa",
+    
     "deploy": "echo deploy...",
-    "diststart": "echo diststart...",
-    "start": "echo start..."
+
+    "verifyezlint": "echo verifyezlint...",
+    "verifybundle": "echo bundle...",
+    "verifykeycqa": "echo verify...",
+    "verifyqolcqa": "echo verify...",
+    "verifycqa": "echo verify...",
+    "verifypkgsca": "echo verify...",
+    "verifyimgsca": "echo verify...",
+    "verifysrcsca": "echo verify...",
+    "verifysca": "echo verify...",
+    "verifysast": "echo verify...",
+
+    "promote": "echo promote...",
+    "promotedev": "echo promote...",
+    "promotelwr": "echo promote...",
+    "promoteupr": "echo promote...",
+
+    "e2ept": "echo e2e...",
+    "e2edast": "echo e2e...",
+    "e2efullft": "echo e2e...",
+    "e2esmokeft": "echo e2e...",
+    "e2euxt": "echo e2e...",
+
+    "e2edev": "echo e2e...",
+    "e2elwr": "echo e2e...",
+
+    "start": "echo start...",
+    "startdev": "echo start...",
+    "startdebug": "echo start...",
+
+    "dev": "echo dev...",
+    "debug": "echo debug..."
   },
   "author": "Boubacar Diallo",
   "license": "ISC"
