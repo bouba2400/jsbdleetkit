@@ -30,7 +30,7 @@ export const hasEvenParentheses = function (s) {
 					match = '{';
 					break;
 				}
-        // No default
+				// No default
 			}
 
 			if (stack.length > 0 && stack[stack.length - 1] === match) {

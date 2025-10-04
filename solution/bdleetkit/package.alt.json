@@ -30,14 +30,14 @@
     "promotelwr": "echo promote...",
     "promoteupr": "echo promote...",
 
-    "e2ept": "echo e2e...",
+    "e2eheavypt": "echo e2e...",
+    "e2elightpt": "echo e2e...",
     "e2edast": "echo e2e...",
     "e2efullft": "echo e2e...",
     "e2esmokeft": "echo e2e...",
     "e2euxt": "echo e2e...",
-
-    "e2edev": "echo e2e...",
-    "e2elwr": "echo e2e...",
+    "e2edev": "echo e2edev...",
+    "e2elwr": "echo e2elwr...",
 
     "start": "echo start...",
     "startdev": "echo start...",

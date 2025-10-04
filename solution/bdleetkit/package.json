@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "lint": "xo --fix",
-    "test": "node src/test/array-utils/twosum.test.js",
+    "test": "node src/test/numleet/twosum.test.js",
     "bundle": "node src/build/bundle.js",
     "bundleonchange": "echo bundleonchange...",
     "prepackage": "npm run lint && npm run test && npm run bundle",
