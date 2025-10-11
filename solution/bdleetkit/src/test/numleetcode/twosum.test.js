@@ -1,4 +1,4 @@
-import {twoSum} from '../../lib/numleet.js';
+import {twoSum} from '../../lib/numleetcode.js';
 
 function returnsZeroAndOneForEqualTwoElementArray() {
 	const nums = [3, 3];

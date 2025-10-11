@@ -4,7 +4,7 @@
   "description": "jsbdleetkit",
   "private": true,
  "scripts": {
-    "prepare": "sh ./tooling/localenvsetup/setuphusky.sh",
+    "prepare": "sh ./tooling/localdev/envsetup/setuphusky.sh",
     "lintstaged": "lint-staged",
     "packageaffected": "nx affected -t package",
     "deployaffected": "nx affected -t deploy",

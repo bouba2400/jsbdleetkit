@@ -83,3 +83,52 @@ export const climbStairsMoreEfficiently = function (n) {
 
 	return currentCount;
 };
+
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+export const maxProfit = function (prices) {
+	let result = 0;
+	for (let i = 0; i < prices.length; i++) {
+		let max = null;
+		for (let j = i + 1; j < prices.length; j++) {
+			if (max === null || prices[j] > max) {
+				max = prices[j];
+			}
+		}
+
+		const profit = max !== null && max > prices[i] ? max - prices[i] : 0;
+		if (profit > result) {
+			result = profit;
+		}
+	}
+
+	return result;
+};
+
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+export const maxProfitEfficiently = function (prices) {
+	if (prices.length < 2) {
+		return 0;
+	}
+
+	let lowest = prices[0];
+	let max = 0;
+
+	for (let i = 1; i < prices.length; i++) {
+		if (prices[i] < lowest) {
+			lowest = prices[i];
+		}
+
+		const profit = prices[i] - lowest;
+		if (profit > max) {
+			max = profit;
+		}
+	}
+
+	return max;
+};
