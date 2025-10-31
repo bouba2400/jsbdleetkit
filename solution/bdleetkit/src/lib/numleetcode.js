@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/prevent-abbreviations */
+/* eslint-disable no-bitwise */
 /* eslint-disable unicorn/no-for-loop */
 /**
  * @param {number[]} nums
@@ -131,4 +133,37 @@ export const maxProfitEfficiently = function (prices) {
 	}
 
 	return max;
+};
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+export const reverseBits = function (n) {
+	let result = 0;
+	for (let i = 0; i < 32; i++) {
+		const nWithIthBitAsLowest = n >> (31 - i);
+		const nWithOnlyIthBitAsLowest = nWithIthBitAsLowest & 1;
+		const nWithOnlyIthBitAsReserveIth = nWithOnlyIthBitAsLowest << i;
+		result |= nWithOnlyIthBitAsReserveIth;
+	}
+
+	return result;
+};
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+export const hammingWeight = function (n) {
+	let res = 0;
+	for (let index = 0; index < 32; index++) {
+		const nWithIthBitAsLowest = n >> (31 - index);
+		const nWithOnlyIthBitAsLowest = nWithIthBitAsLowest & 1;
+		if (nWithOnlyIthBitAsLowest === 1) {
+			res += 1;
+		}
+	}
+
+	return res;
 };
