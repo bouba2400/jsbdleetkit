@@ -78,3 +78,29 @@ export const maxDepth = function (root) {
 
 	return leftmd > rightmd ? leftmd + 1 : rightmd + 1;
 };
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+export const invertTree = function (root) {
+	if (!root) {
+		return null;
+	}
+
+	const invertedLeft = invertTree(root.left);
+	const invertedRight = invertTree(root.right);
+
+	root.left = invertedRight;
+	root.right = invertedLeft;
+
+	return root;
+};

@@ -1,3 +1,4 @@
+/* eslint-disable logical-assignment-operators */
 /* eslint-disable @stylistic/quotes */
 /* eslint-disable unicorn/prefer-code-point */
 /* eslint-disable unicorn/prefer-at */
@@ -117,4 +118,43 @@ export const isPalindromeEfficiently = function (s) {
 	}
 
 	return !mismatch;
+};
+
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+export const isAnagram = function (s, t) {
+	if (s.length !== t.length) {
+		return false;
+	}
+
+	if (s === t) {
+		return true;
+	}
+
+	const idx = {};
+	for (let i = 0; i < s.length; i++) {
+		const c = s[i];
+		if (!idx[c]) {
+			idx[c] = 0;
+		}
+
+		idx[c] += 1;
+	}
+
+	for (let i = 0; i < t.length; i++) {
+		const c = t[i];
+		if (!idx[c]) {
+			break;
+		}
+
+		idx[c] -= 1;
+		if (idx[c] === 0) {
+			delete idx[c];
+		}
+	}
+
+	return Object.keys(idx).length === 0;
 };

@@ -80,3 +80,46 @@ export const mergeTwoLists = function (list1, list2) {
 
 	return mergedHead;
 };
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+export const reverseList = function (head) {
+	if (!head) {
+		return null;
+	}
+
+	if (!head.next) {
+		return head;
+	}
+
+	const reversedTailTail = head.next;
+	const reversedTailHead = reverseList(head.next);
+	reversedTailTail.next = head;
+	head.next = null;
+
+	return reversedTailHead;
+};
+
+export const reverseListAlternatively = function (head) {
+	let i = head;
+	let previous = null;
+	let next;
+
+	while (i) {
+		next = i.next;
+		i.next = previous;
+		previous = i;
+		i = next;
+	}
+
+	return previous;
+};

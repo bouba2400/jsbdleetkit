@@ -167,3 +167,22 @@ export const hammingWeight = function (n) {
 
 	return res;
 };
+
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+export const containsDuplicate = function (nums) {
+	const index = {};
+	let dupFound = false;
+	for (let i = 0; i < nums.length; i++) {
+		if (index[nums[i]]) {
+			dupFound = true;
+			break;
+		}
+
+		index[nums[i]] = true;
+	}
+
+	return dupFound;
+};
