@@ -186,3 +186,16 @@ export const containsDuplicate = function (nums) {
 
 	return dupFound;
 };
+
+/**
+ * @param {number} n
+ * @return {number[]}
+ */
+export const countBits = function (n) {
+	const ans = [];
+	for (let i = 0; i < n + 1; i++) {
+		ans[i] = hammingWeight(i);
+	}
+
+	return ans;
+};
