@@ -3,6 +3,7 @@
 /* eslint-disable unicorn/prefer-code-point */
 /* eslint-disable unicorn/prefer-at */
 /* eslint-disable unicorn/no-for-loop */
+
 /**
  * @param {string} s
  * @return {boolean}
@@ -157,52 +158,4 @@ export const isAnagram = function (s, t) {
 	}
 
 	return Object.keys(idx).length === 0;
-};
-
-/**
- * @param {string} s
- * @return {number}
- */
-export const lengthOfLongestSubstring = function (s) {
-	if (!s) {
-		return 0;
-	}
-
-	if (s.length < 2) {
-		return s.length;
-	}
-
-	let done = false;
-	let longestSsBegin = 0;
-	let longestSsEnd = 0;
-	let currentSsBegin = 0;
-	let currentSsEnd = 0;
-	let currentSsElementsIndex = {};
-
-	while (!done) {
-		if (currentSsElementsIndex[s[currentSsEnd]] === true) {
-			if ((currentSsEnd - currentSsBegin - 1) > (longestSsEnd - longestSsBegin)) {
-				longestSsBegin = currentSsBegin;
-				longestSsEnd = currentSsEnd - 1;
-			}
-
-			currentSsBegin++;
-			currentSsEnd = currentSsBegin;
-			currentSsElementsIndex = {};
-		} else {
-			currentSsElementsIndex[s[currentSsEnd]] = true;
-			currentSsEnd++;
-		}
-
-		if (currentSsEnd > (s.length - 1)) {
-			done = true;
-		}
-	}
-
-	if ((currentSsEnd - currentSsBegin - 1) > (longestSsEnd - longestSsBegin)) {
-		longestSsBegin = currentSsBegin;
-		longestSsEnd = currentSsEnd - 1;
-	}
-
-	return longestSsEnd - longestSsBegin + 1;
 };
